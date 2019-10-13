@@ -8,14 +8,26 @@
 
 import UIKit
 import CoreData
+import LeanCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+   
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        do {
+            LCApplication.logLevel = .all   //开启调试日志，发布前请删除
+            try LCApplication.default.set(
+                id: "59nx7tcfumual4zzkIPQ6x4k-gzGzoHsz",
+                key: "R1iYx7kRfdcsPAlyACKWb6x0",
+                serverURL: "https://59nx7tcf.lc-cn-n1-shared.com")
+        } catch {
+            print(error)
+        }
+
         return true
     }
 
