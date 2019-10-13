@@ -1,0 +1,6 @@
+target 'Uicery'
+    use_frameworks!
+    inhibit_all_warnings!
+
+    pod 'LeanCloud', '~> 17.0.0'
+end 
