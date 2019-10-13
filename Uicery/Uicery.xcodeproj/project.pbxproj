@@ -16,6 +16,7 @@
 		96C6C42023530B2700A141DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C6C41E23530B2700A141DE /* LaunchScreen.storyboard */; };
 		96C6C42B23530B2800A141DE /* UiceryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C6C42A23530B2800A141DE /* UiceryTests.swift */; };
 		96C6C43623530B2800A141DE /* UiceryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C6C43523530B2800A141DE /* UiceryUITests.swift */; };
+		EBE4A7D42CEB532165C381CB /* Pods_Uicery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A26678F92AF5893144B91E /* Pods_Uicery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		96C6C43123530B2800A141DE /* UiceryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UiceryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C6C43523530B2800A141DE /* UiceryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiceryUITests.swift; sourceTree = "<group>"; };
 		96C6C43723530B2800A141DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9A26678F92AF5893144B91E /* Pods_Uicery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uicery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1BAE9A24120BF145F69D13A /* Pods-Uicery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uicery.release.xcconfig"; path = "Target Support Files/Pods-Uicery/Pods-Uicery.release.xcconfig"; sourceTree = "<group>"; };
+		C683BE949290A8C4A17C954F /* Pods-Uicery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uicery.debug.xcconfig"; path = "Target Support Files/Pods-Uicery/Pods-Uicery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE4A7D42CEB532165C381CB /* Pods_Uicery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04B636BEAA356498B533CC44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C683BE949290A8C4A17C954F /* Pods-Uicery.debug.xcconfig */,
+				C1BAE9A24120BF145F69D13A /* Pods-Uicery.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7ADD26C31974E855021D3A1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9A26678F92AF5893144B91E /* Pods_Uicery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96C6C40423530B2600A141DE = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +108,8 @@
 				96C6C42923530B2800A141DE /* UiceryTests */,
 				96C6C43423530B2800A141DE /* UiceryUITests */,
 				96C6C40E23530B2600A141DE /* Products */,
+				04B636BEAA356498B533CC44 /* Pods */,
+				7ADD26C31974E855021D3A1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96C6C43A23530B2800A141DE /* Build configuration list for PBXNativeTarget "Uicery" */;
 			buildPhases = (
+				5D4356EED4AE98F13EEAE610 /* [CP] Check Pods Manifest.lock */,
 				96C6C40923530B2600A141DE /* Sources */,
 				96C6C40A23530B2600A141DE /* Frameworks */,
 				96C6C40B23530B2600A141DE /* Resources */,
+				E5F54663541043D4A9400148 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D4356EED4AE98F13EEAE610 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Uicery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5F54663541043D4A9400148 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Uicery/Pods-Uicery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Uicery/Pods-Uicery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Uicery/Pods-Uicery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96C6C40923530B2600A141DE /* Sources */ = {
@@ -436,6 +505,7 @@
 		};
 		96C6C43B23530B2800A141DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C683BE949290A8C4A17C954F /* Pods-Uicery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +524,7 @@
 		};
 		96C6C43C23530B2800A141DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1BAE9A24120BF145F69D13A /* Pods-Uicery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
